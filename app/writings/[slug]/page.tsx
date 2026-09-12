@@ -34,8 +34,8 @@ export default async function WritingPage(props: PageProps<"/writings/[slug]">) 
   const writing = getWritingBySlug(slug);
   if (!writing) notFound();
 
-  const isMedium = !!writing.mediumUrl;
-  const displayContent = isMedium
+  const isSubstack = !!writing.substackUrl;
+  const displayContent = isSubstack
     ? getPreviewParagraphs(writing.content, 3)
     : writing.content;
   const html = await markdownToHtml(displayContent);
@@ -71,9 +71,9 @@ export default async function WritingPage(props: PageProps<"/writings/[slug]">) 
               {tag}
             </span>
           ))}
-          {isMedium && (
+          {isSubstack && (
             <span className="px-2 py-0.5 rounded bg-[#3b6ef7]/10 text-[#7babf8]">
-              on Medium
+              on Substack
             </span>
           )}
         </div>
@@ -84,18 +84,18 @@ export default async function WritingPage(props: PageProps<"/writings/[slug]">) 
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      {isMedium && (
+      {isSubstack && (
         <div className="mt-10 pt-8 border-t border-[#1a3060]">
           <p className="text-[#6b7fa3] text-sm mb-4">
-            This is a preview. Read the full article on Medium.
+            This is a preview. Read the full article on Substack.
           </p>
           <a
-            href={writing.mediumUrl}
+            href={writing.substackUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-white bg-[#3b6ef7] hover:bg-[#2d5fe0] px-5 py-2.5 rounded-full transition-colors shadow-[0_0_24px_#3b6ef733]"
           >
-            Continue reading on Medium →
+            Continue reading on Substack →
           </a>
         </div>
       )}

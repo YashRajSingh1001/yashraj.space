@@ -12,7 +12,7 @@ export interface Writing {
   tags: string[];
   readTime: number;
   content: string;
-  mediumUrl?: string;
+  substackUrl?: string;
 }
 
 function calcReadTime(content: string): number {
@@ -39,7 +39,7 @@ export function getAllWritings(): Writing[] {
         tags: data.tags ?? [],
         readTime: calcReadTime(content),
         content,
-        mediumUrl: data.mediumUrl,
+        substackUrl: data.substackUrl,
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));

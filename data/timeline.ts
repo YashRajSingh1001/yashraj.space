@@ -8,16 +8,9 @@ export interface Milestone {
 
 export const milestones: Milestone[] = [
   {
-    year: "2002",
-    month: "June",
-    title: "Born",
-    description: "Arrived in the world. Didn't know what I was getting into.",
-    type: "life",
-  },
-  {
     year: "2019",
-    title: "BSc Mathematics Honours — SGTB Khalsa College, Delhi University",
-    description: "Fell in love with numbers. Graduated with 9.09 GPA — perfect 10 in 12 subjects across 3 years. Won a mathematical relay at Miranda House.",
+    title: "BSc Mathematics Honours — Delhi University, North Campus (CGPA 9.09)",
+    description: "Fell in love with numbers. Graduated with perfect 10 in 12 subjects across 3 years. Won a mathematical relay at Miranda House.",
     type: "education",
   },
   {
@@ -38,7 +31,7 @@ export const milestones: Milestone[] = [
     year: "2023",
     month: "November",
     title: "Senior Business Analyst — Treebo Hospitality Ventures, Bengaluru",
-    description: "Moved to Bangalore. Worked directly with executives on revenue strategy — data collection, cleaning, dashboards, and finding the signal in the noise.",
+    description: "Worked directly with senior leadership on revenue strategy — data collection, cleaning, dashboards, and finding the signal in the noise.",
     type: "work",
   },
   {
@@ -66,14 +59,14 @@ export const milestones: Milestone[] = [
     year: "2026",
     month: "March",
     title: "Data Scientist II — MiQ, Bengaluru",
-    description: "Promoted. Same curiosity, bigger problems — now with the title to match the work I was already doing.",
+    description: "Promoted. Same curiosity, bigger problems, now with the title to match the work I was already doing.",
     type: "work",
   },
   {
     year: "2026",
     month: "April",
     title: "Started taking running seriously",
-    description: "Decided to stop dabbling and actually commit. Laced up every morning and didn't stop.",
+    description: "Decided to stop dabbling and actually commit. Lacing up every morning and not stopping.",
     type: "life",
   },
   {
@@ -86,8 +79,8 @@ export const milestones: Milestone[] = [
   {
     year: "2026",
     month: "June",
-    title: "Built this garden",
-    description: "A place to think out loud on the internet.",
+    title: "Finally put a corner of the internet together.",
+    description: "Somewhere to think, write, and keep track.",
     type: "project",
   },
 ];
