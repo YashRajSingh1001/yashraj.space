@@ -8,10 +8,9 @@ export default async function ActivityPage() {
 
   return (
     <div className="soon" style={{ maxWidth: stats ? "none" : undefined }}>
-      <div className="label page-label">§ 06 — Activity</div>
-      <h1 className="h1">Designing this next.</h1>
+      <h1 className="h1">Activity</h1>
       <p style={{ maxWidth: 560 }}>
-        Now playing and top tracks from Spotify, steps and workouts from Fitbit / Google Health, and runs from Strava.
+        Coming soon: now playing and top tracks from Spotify, steps and workouts from Fitbit / Google Health, and runs from Strava.
       </p>
 
       {stats && (
@@ -19,10 +18,10 @@ export default async function ActivityPage() {
           <div className="label">Strava · running</div>
           <div className="stats">
             {[
-              { v: stats.ytdRuns.toString(), l: "RUNS THIS YEAR" },
-              { v: formatDistance(stats.ytdDistance), l: "THIS YEAR" },
-              { v: stats.allTimeRuns.toString(), l: "ALL-TIME RUNS" },
-              { v: formatDistance(stats.allTimeDistance), l: "ALL-TIME" },
+              { v: stats.ytdRuns.toString(), l: "Runs this year" },
+              { v: formatDistance(stats.ytdDistance), l: "This year" },
+              { v: stats.allTimeRuns.toString(), l: "All-time runs" },
+              { v: formatDistance(stats.allTimeDistance), l: "All time" },
             ].map((s) => (
               <div key={s.l} className="stat">
                 <div className="stat-v">{s.v}</div>

@@ -13,7 +13,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="page">
-      <PageHead label="§ 02 — Projects" title="Projects" sub="Builds and experiments, with code on GitHub." />
+      <PageHead title="Projects" sub="Builds and experiments, with code on GitHub." />
       <div className="proj-grid">
         {projects.map((p) => (
           <div key={p.slug} className="card">

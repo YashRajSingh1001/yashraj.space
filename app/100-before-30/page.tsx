@@ -22,7 +22,6 @@ export default function Goals100Page() {
 
   return (
     <div className="page">
-      <div className="label page-label">§ 05 — {TARGET} before 30</div>
       <div className="list-head">
         <div>
           <h1 className="h1">{TARGET} before 30</h1>

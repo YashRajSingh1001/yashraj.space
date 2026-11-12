@@ -25,7 +25,6 @@ export default async function WritingsPage() {
   return (
     <div className="page page-narrow">
       <PageHead
-        label="§ 01 — Writings"
         title="Writings"
         count={posts.length}
         sub="Essays and things I couldn't stop thinking about. Click one to preview — the rest lives on Substack."

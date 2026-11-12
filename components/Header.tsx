@@ -16,7 +16,7 @@ const links = [
 
 function toggleTheme() {
   const el = document.documentElement;
-  const next = el.dataset.theme === "light" ? "dark" : "light";
+  const next = el.dataset.theme === "dark" ? "light" : "dark";
   el.dataset.theme = next;
   try {
     localStorage.setItem("yrs-theme", next);

@@ -8,7 +8,6 @@ export default function TimelinePage() {
   return (
     <div className="page page-narrow">
       <PageHead
-        label="§ 03 — Timeline"
         title="Timeline"
         count={milestones.length}
         sub="When and what I did, since graduating in 2022."

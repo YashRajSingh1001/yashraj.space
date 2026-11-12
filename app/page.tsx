@@ -66,7 +66,6 @@ export default async function Home() {
 
       <section className="fig fig-bordered fig-top">
         <div>
-          <div className="label">FIG. 01</div>
           <div className="fig-title">Where I&apos;ve worked</div>
         </div>
         <div>
@@ -93,7 +92,6 @@ export default async function Home() {
 
       <section className="fig fig-bordered">
         <div>
-          <div className="label">FIG. 02</div>
           <div className="fig-title">What I work with</div>
         </div>
         <div>
@@ -114,7 +112,6 @@ export default async function Home() {
 
       <section className="fig fig-bordered">
         <div>
-          <div className="label">FIG. 03</div>
           <div className="fig-title">Off the clock</div>
           <p className="fig-note">Mostly mountains. Usually on foot.</p>
         </div>
@@ -138,7 +135,6 @@ export default async function Home() {
 
       <section className="fig fig-bordered">
         <div>
-          <div className="label">FIG. 04</div>
           <div className="fig-title">On Instagram</div>
           <p className="fig-note">
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
@@ -169,7 +165,6 @@ export default async function Home() {
 
       <section className="fig fig-last">
         <div>
-          <div className="label">FIG. 05</div>
           <div className="fig-title">On this site</div>
         </div>
         <div className="tiles">
