@@ -6,38 +6,36 @@ const projectsDir = path.join(process.cwd(), "projects");
 
 export interface Project {
   slug: string;
-  title: string;
+  name: string;
   description: string;
-  status: "active" | "shipped" | "paused" | "building";
+  status: "Building" | "Shipped";
   stack: string[];
   url?: string;
   github?: string;
-  year: string;
-  content: string;
+  image?: string; // path under /public, e.g. /projects/foo.png
+  order: number;
 }
 
 export function getAllProjects(): Project[] {
   if (!fs.existsSync(projectsDir)) return [];
 
-  const files = fs.readdirSync(projectsDir).filter((f) => f.endsWith(".md"));
-
-  return files
+  return fs
+    .readdirSync(projectsDir)
+    .filter((f) => f.endsWith(".md"))
     .map((file) => {
       const slug = file.replace(/\.md$/, "");
-      const raw = fs.readFileSync(path.join(projectsDir, file), "utf-8");
-      const { data, content } = matter(raw);
-
+      const { data } = matter(fs.readFileSync(path.join(projectsDir, file), "utf-8"));
       return {
         slug,
-        title: data.title ?? slug,
+        name: data.name ?? data.title ?? slug,
         description: data.description ?? "",
-        status: data.status ?? "active",
+        status: data.status === "Shipped" ? "Shipped" : "Building",
         stack: data.stack ?? [],
         url: data.url,
         github: data.github,
-        year: data.year ?? new Date().getFullYear().toString(),
-        content,
+        image: data.image,
+        order: data.order ?? 99,
       } as Project;
     })
-    .sort((a, b) => (a.year < b.year ? 1 : -1));
+    .sort((a, b) => a.order - b.order);
 }

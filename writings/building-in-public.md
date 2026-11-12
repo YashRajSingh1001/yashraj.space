@@ -1,5 +1,6 @@
 ---
 title: "Why I'm Building in Public"
+sub: "The discomfort might be the point."
 date: "2026-05-01"
 excerpt: "There's something uncomfortable about showing work before it's ready. That discomfort might be exactly the point."
 tags: ["building", "writing"]
